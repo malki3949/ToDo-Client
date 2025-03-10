@@ -20,6 +20,8 @@ function Todoo() {
   }
   //יצירת משימה
   async function createTodo(e) {
+    console.log("createTodo");
+    
     e.preventDefault();
     await service1.addTask(newTodo);
     await getTodos();
