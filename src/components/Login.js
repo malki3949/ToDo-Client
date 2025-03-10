@@ -26,6 +26,8 @@ export default function Login() {
     console.log(user);  
     var f=await service1.login(user.id,user.name,user.password);
     console.log(user);
+    console.log(f);
+
     
     // //אמור להחזיר שגיאת 401 ובמקרה זה יש לשלוח להרשמה
     // if(f.data==null)
