@@ -58,7 +58,14 @@ function Todoo() {
         </header>
         <section className="main" style={{ display: "block" }}>
           <ul className="todo-list">
-            {todos.map(todo => {
+          {/* if (Array.isArray(r)) {
+    r.map(item => {
+        // עשה משהו עם item
+    });
+} else {
+    console.error("r is not an array:", r);
+} */}
+            {Array.isArray(todos)&&todos.map(todo => {
               return (
                 <li className={todo.isComplete ? "completed" : ""} key={todo.id}>
                   <div className="view">
