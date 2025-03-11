@@ -104,7 +104,7 @@ export default {
       console.log(res.data);
     
   }
-    else
+    else if(res.status==500)
       swal("אתה לא רשום אצלינו", "הכנס להרשמה", " info")
     return res;
   },
