@@ -4,7 +4,7 @@ import { jwtDecode } from 'jwt-decode';
 
 
 //דפולטיבית API הגדרת כתובת 
-axios.defaults.baseURL = REACT_APP_API_URL
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
 //תפיסת שגיאות
 axios.interceptors.response.use(function (response) {
   return response;
