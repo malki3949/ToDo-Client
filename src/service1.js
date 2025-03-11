@@ -94,15 +94,23 @@ export default {
 //     }
 // },
   //התחברות
-    login: async (IdUsers, UserName, Userspaasword) => {
-    const res = await axios.post("login", { IdUsers, UserName, Userspaasword });
-     await  console.log(res);
-     if (res){
-    // if (res.data != null){
-      res.data&&saveAccessToken(res.data.jwt);
-      console.log(res.data);
+  //   login: async (IdUsers, UserName, Userspaasword) => {
+  //   const res = await axios.post("login", { IdUsers, UserName, Userspaasword });
+  //    await  console.log(res);
+  //    if (res){
+  //   // if (res.data != null){
+  //     res.data&&saveAccessToken(res.data.jwt);
+  //     console.log(res.data);
     
-  }
+  // }
+  //   else
+  //     swal("אתה לא רשום אצלינו", "הכנס להרשמה", " info")
+  //   return res;
+  // },
+  login: async (IdUsers, UserName, Userspaasword) => {
+    const res = await axios.post("login", { IdUsers, UserName, Userspaasword});
+    if (res.data != null)
+      saveAccessToken(res.data.jwt);
     else
       swal("אתה לא רשום אצלינו", "הכנס להרשמה", " info")
     return res;
