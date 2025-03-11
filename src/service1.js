@@ -96,16 +96,16 @@ export default {
   //התחברות
     login: async (IdUsers, UserName, Userspaasword) => {
     
-    try{  const res = await axios.post("login", { IdUsers, UserName, Userspaasword });
-     await  console.log(res);
-    //  if (res.data){
-    // if (res.data != null){
-      res.data&&saveAccessToken(res.data.jwt);
-      console.log(res.data);
-     }
+    try{   await axios.post("login", { IdUsers, UserName, Userspaasword });}
+    //  await  console.log(res);
+    // //  if (res.data){
+    // // if (res.data != null){
+    //   res.data&&saveAccessToken(res.data.jwt);
+    //   console.log(res.data);
+    //  }
   catch{
       swal("אתה לא רשום אצלינו", "הכנס להרשמה", " info")
-    return res;
+    
   }},
   //קבלת איפורמציה
   info: async () => {
