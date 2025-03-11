@@ -97,7 +97,7 @@ export default {
     login: async (IdUsers, UserName, Userspaasword) => {
     const res = await axios.post("login", { IdUsers, UserName, Userspaasword });
      await  console.log(res);
-     if (res.status==200){
+     if (res.status!=500){
     // if (res.data != null){
       res.data&&saveAccessToken(res.data.jwt);
       console.log(res.data);
