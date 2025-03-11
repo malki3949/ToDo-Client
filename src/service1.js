@@ -38,7 +38,7 @@ function setAuthorizationBearer() {
 }
 function helpgetLoginUser(){
   const accessToken = localStorage.getItem("access_token");
-      if (accessToken==undefined) {
+      if (accessToken) {
         return jwtDecode(accessToken);
       }
       return null;
