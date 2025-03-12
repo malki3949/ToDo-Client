@@ -15,6 +15,10 @@ axios.interceptors.response.use(function (response) {
    await console.log("b");
     return (window.location.href = "/register");
   }
+  if (error.response.status === 500) {
+    // await console.log("b");
+     return (window.location.href = "/register");
+   }
   else {
 
     swal(`${error.name}`, `${error.message}`, "error")
