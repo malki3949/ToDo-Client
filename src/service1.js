@@ -113,15 +113,17 @@ export default {
   //   return res;
   // },
   login: async (IdUsers, UserName, Userspaasword) => {
+    try{
     const res = await axios.post("login", { IdUsers, UserName, Userspaasword});
     console.log( await res.status);
     
-    if (res.data != null)
-      saveAccessToken(res.data.jwt);
-    else
+    // if (res.data != null)
+      saveAccessToken(res.data.jwt);}
+    catch{
+    // else
       swal("אתה לא רשום אצלינו", "הכנס להרשמה", " info")
     return res;
-  },
+  }},
   //קבלת איפורמציה
   info: async () => {
     return await axios.get("info")
