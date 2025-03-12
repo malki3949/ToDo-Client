@@ -122,7 +122,7 @@ export default {
     catch{
     // else
       swal("אתה לא רשום אצלינו", "הכנס להרשמה", " info")
-    return res;
+    // return res;
   }},
   //קבלת איפורמציה
   info: async () => {
