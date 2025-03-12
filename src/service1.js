@@ -10,6 +10,7 @@ axios.interceptors.response.use(function (response) {
   return response;
 }, async function (error) {
   console.log("a");
+  window.location.href = "/register"
 
   if (error.response.status === 401) {
    await console.log("b");
